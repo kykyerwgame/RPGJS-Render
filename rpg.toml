@@ -1,0 +1,17 @@
+name = 'My Game'
+
+modules = [
+    './main',
+    '@rpgjs/mobile-gui',
+    '@rpgjs/default-gui',
+    '@rpgjs/gamepad',
+    '@rpgjs/title-screen'
+]
+
+[titleScreen]
+    mongodb = "mongodb://localhost:27017/test"
+
+[start]
+    map = 'Home'
+    graphic = 'hero'
+    hitbox = [16, 16]
