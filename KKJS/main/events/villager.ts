@@ -16,6 +16,10 @@ export default class VillagerEvent extends RpgEvent {
         await player.showText('我給您10元', {
             talkWith: this
         })
-        player.gold += 10
+        if (typeof player.gold === 'number') {
+            player.gold += 10
+        } else {
+            player.gold = (player.gold || 0) + 10
+        }
     }
 } 
